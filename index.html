@@ -134,16 +134,16 @@
                   >
                 </li>
                 <li>
-                  <a href="about-us.html" title="About Us">Sobre nós</a>
+                  <a href="#sobre-nos" title="About Us">Sobre nós</a>
                 </li>
                 <li>
-                  <a href="service.html">Serviços</a>
+                  <a href="#nossos-serviços">Serviços</a>
                 </li>
                 <li>
-                  <a href="service.html">Galeria</a>
+                  <a href="#galeria">Galeria</a>
                 </li>
                 <li>
-                  <a href="service.html">Contato</a>
+                  <a href="#footer">Contato</a>
                 </li>
                 
               <!-- end .nav .navbar-nav  -->
@@ -370,7 +370,7 @@
 
     <!--  ABOUT US -->
 
-    <section class="section-content-block">
+    <section class="section-content-block" id="sobre-nos">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-12 visible-lg visible-md">
@@ -405,9 +405,9 @@
     </section>
     <!--  end .section-content-block -->
 
-    <!--  SECTION SERVICE 03 -->
+    <!--  Nossos serviços -->
 
-    <section class="section-content-block section-secondary-bg">
+    <section class="section-content-block section-secondary-bg" id="nossos-serviços">
       <div class="container">
         <div class="row section-heading-wrapper">
           <div class="col-md-12 col-sm-12 text-center">
@@ -1166,7 +1166,7 @@
 
     <!--  GALLERY CONTENT  -->
 
-    <section class="section-content-block no-padding">
+    <section class="section-content-block no-padding" id="galeria">
       <div class="container-fluid no-padding-gallery">
         <div
           class="gallery-carousel owl-carousel"
@@ -1481,7 +1481,7 @@
     </a>
     <!-- START FOOTER  -->
 
-    <footer class="section-pure-black-bg">
+    <footer class="section-pure-black-bg" id="footer">
       <section
         class="footer-widget-area footer-widget-area-bg section-custom-bg"
         data-bg_color="#111111"
@@ -1625,6 +1625,29 @@
     <!-- BACK TO TOP BUTTON  -->
     <a id="backTop"></a>
 
+    <script>
+      const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const target = document.querySelector(link.getAttribute('href'));
+    
+    // Obtém a altura da janela de visualização
+    const windowHeight = window.innerHeight;
+
+    // Calcula a posição de rolagem ajustada
+    const scrollPosition = target.getBoundingClientRect().top + window.scrollY - windowHeight * 0.2;
+
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+    </script>
+
     <script src="js/rLbQEoxgCmSU.js"></script>
     <script src="js/WVfSUoJtgIL6.js"></script>
     <script src="js/DmIlbBgJeSTr.js"></script>
@@ -1636,5 +1659,6 @@
     <script src="js/7SrMJQUQ6BdU.js"></script>
     <script src="js/ceMQywJWdu27.js"></script>
     <script src="js/cTMK8sixRGYc.js"></script>
+    
   </body>
 </html>

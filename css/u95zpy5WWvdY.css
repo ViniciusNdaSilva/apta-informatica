@@ -1608,9 +1608,15 @@ pre code {
   margin-left: auto;
 }
 .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.align-team {
   display: flex;
   justify-content: center;
 }
+
 .col-lg-1,
 .col-lg-10,
 .col-lg-11,

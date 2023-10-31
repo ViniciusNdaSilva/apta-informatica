@@ -316,3 +316,15 @@ p.large.centered {
   -o-transition: 0.2s 0.2s ease-in-out;
   transition: 0.2s 0.2s ease-in-out;
 }
+
+.responsive-count {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .responsive-count {
+    display: flex;
+    flex-direction: column;
+  }
+}

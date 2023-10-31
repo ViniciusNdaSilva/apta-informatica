@@ -1615,6 +1615,13 @@ pre code {
 .align-team {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .align-team {
+    flex-direction: column;
+  }
 }
 
 .col-lg-1,

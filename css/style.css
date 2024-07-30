@@ -328,3 +328,9 @@ p.large.centered {
     flex-direction: column;
   }
 }
+
+.center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
